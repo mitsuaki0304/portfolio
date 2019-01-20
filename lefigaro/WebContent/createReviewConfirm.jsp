@@ -119,7 +119,7 @@
 
 					<h3>タイトル</h3>
 					<h4>
-						<s:property value="session.reviewStar" escape="false" />
+						<s:property value="session.title" escape="false" />
 					</h4>
 
 					<h3>コメント</h3>

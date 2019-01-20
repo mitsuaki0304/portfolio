@@ -17,7 +17,11 @@
 	<div id="contents" class="inner">
 		<div id="breadcrumb">
 			<ol>
-				<li><a href="index.html">HOME</a></li>
+				<li><a
+					href='<s:url action="HomeAction">
+						<s:param name="tempId" value="%{#session.tempId}"/>
+						<s:param name="userId" value="%{#session.userId}"/>
+						</s:url>'>HOME</a></li>
 				<li>カート</li>
 			</ol>
 		</div>
