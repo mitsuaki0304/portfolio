@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+/****************************************
+contents
+*****************************************/
+.box {
+	background: url(../images/home01.jpg) no-repeat center;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+}
+
+.box::before {
+	background-color: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: ' ';
+}
+
+.box-centered {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+}
+
+.box-contents {
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+
+.box-title {
+	color: #fff;
+	font-size: 48px;
+	font-weight: bold;
+	font-family: 'Vollkorn', serif;
+}
+
+.box-text {
+	color: #fff;
+	font-size: 16px;
+}
+
+#main .title {
+	width: 85%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#main  h4 {
+	font-size: 36px;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.about {
+	width: 85%;
+	text-align: center;
+	margin: 0 auto;
+	/* margin-bottom: 50px; */
+}
+
+#main .about .btn {
+	width: 20%;
+	border-radius: 15px;
+}
+
+#main .about img {
+	width: 100%;
+	height: auto;
+}
+
+.select-product {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.select-product ul {
+	width: 100%;
+}
+
+.select-product li {
+	position: relative;
+	float: left;
+	width: calc(100%/ 3);
+	list-style: none;
+	color: #FFF;
+	line-height: 2em;
+	font-size: 24px;
+	text-align: center;
+}
+
+.select-product li:nth-child(3n) {
+	margin-right: 0;
+}
+
+.select-product li img {
+	vertical-align: bottom;
+	width: 100%;
+}
+
+.select-product div {
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: 100%;
+	padding-top: 25%;
+	background: rgba(0, 0, 0, 0.6);
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+}
+
+.select-product p {
+	position: relative;
+	top: 0;
+}
+
+.ggmap {
+	position: relative;
+	padding-bottom: 30%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.ggmap iframe, .ggmap object, .ggmap embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media screen and (max-width:750px) {
+	/*全体の設定
+---------------------------------------------------------------------------*/
+	.select-product li {
+		float: none;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:750px) {
+	/*全体の設定
+---------------------------------------------------------------------------*/
+	.about img {
+		display: none;
+	}
+	figure {
+		float: none;
+		width: 100%;
+	}
+	.ggmap {
+
+		padding-bottom: 60%;
+
+	}
+}

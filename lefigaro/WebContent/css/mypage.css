@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+/*mypage
+---------------------------------------------------------------------------*/
+.mypage {
+	width: 800px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.mypage li {
+	float: left;
+	width: 200px;
+	margin-right: 100px;
+	list-style: none;
+}
+
+.mypage  li:nth-child(3) {
+	margin-right: 0;
+}
+
+.mypage  li p {
+	margin: 10px 0;
+	font-weight: 100;
+}
+
+.icon {
+	text-align: center;
+}
+
+.icon a {
+	color: #555;
+	background-color: #fff;
+	display: block;
+	margin: 0 auto;
+	width: 194px;
+	line-height: 194px;
+	border: 3px solid #555;
+	font-size: 48px;
+	border-radius: 100px;
+}
+
+.icon a:hover {
+	background-color: #ccc;
+	color: #fff;
+}
+
+/*userinfo
+---------------------------------------------------------------------------*/
+#main .userinfo  {
+	width: 50%;
+	margin: 0 auto;
+}
+
+#main .userinfo table, th, td {
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+	line-height: 1.5;
+}
+
+#main .userinfo table th {
+	padding: 10px;
+	font-weight: bold;
+	border: 1px solid #ccc;
+	background: #efefef;
+	width: 30%;
+	text-align: left;
+}
+
+#main .userinfo table td {
+	padding: 10px;
+	vertical-align: middle;
+	text-align: left;
+	border: 1px solid #ccc;
+}
+
+/*destinationinfo
+---------------------------------------------------------------------------*/
+#main .destination-info {
+	width: 780px;
+	margin: 0 auto;
+}
+
+.destination-info li {
+	background-color: #efefef;
+	border: solid 1px #ccc;
+	border-radius: 4px;
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 19px;
+	width: 200px;
+	color: #000;
+	font-size: 14px;
+}
+
+.destination-info li:nth-child(3n) {
+	margin-right: 0px;
+}
+#main .buyinfo {
+	width:80%;
+	margin: 0 auto;
+}
+
+#main .buyinfo table {
+	width: 100%;
+	border-collapse: collapse;
+	border: solid #CCC;
+	border-width: 1px;
+	margin-bottom: 50px;
+}
+
+#main .buyinfo tr th {
+	background: #efefef;
+}
+
+#main .buyinfo tr th, #main .buyinfo tr td {
+	padding: 0.5em;
+	text-align: left;
+	vertical-align: top;
+	border: solid #CCC;
+	border-width: 1px;
+}
+
+#main .buyinfo table tr th {
+	width: 35%;
+	background: #eee;
+}
+
+#main .buyinfo input, select {
+	/* margin: 10px; */
+	padding: 5px;
+}
+
+#main .buyinfo input:nth-child(2) {
+	margin-left: 10px;
+}
+
+
+@media screen and (max-width:480px) {
+	.mypage {
+		width: 100%;
+	}
+	.mypage li {
+		float: none;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	#main .userinfo  {
+	width: 100%;
+}
+	#main .destination-info {
+		width: 100% margin: 0 auto;
+		width: 100%;
+	}
+	.destination-info li {
+		width: 89%;
+		margin-right: 0;
+	}
+
+	#main .buyinfo  {
+	width: 100%;
+}
+}

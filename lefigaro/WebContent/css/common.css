@@ -1,0 +1,383 @@
+@charset "UTF-8";
+
+/****************************************
+Resetting
+*****************************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	height: auto;
+}
+
+/*パンくずリスト
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#breadcrumb {
+	font-size: smaller;
+}
+
+#breadcrumb ol {
+	list-style: none;
+	padding-left: 10px;
+	padding-bottom: 15px;
+}
+
+#breadcrumb ol li {
+	display: inline;
+	color: #000;
+	text-decoration: none;
+}
+
+#breadcrumb ol li::after {
+	content: ">";
+	padding-left: 7px;
+}
+
+#breadcrumb ol li:last-child::after {
+	content: none;
+}
+
+.mainvisual {
+	height: 100px;
+	width: 100%;
+	background: #333;
+}
+
+#contents {
+	clear: both;
+	padding-top: 3%;
+}
+
+/*main,subのbox共通*/
+.box {
+	overflow: hidden;
+	padding: 20px;
+}
+
+#main table {
+	/* width: 50%; */
+	margin: 0 auto;
+	border-collapse: collapse;
+	border: solid #CCC;
+	border-width: 1px;
+	margin-bottom: 50px;
+}
+
+#main tr th, #main  tr td {
+	padding: 15px;
+	text-align: left;
+	vertical-align: middle;
+	border: solid #CCC;
+	border-width: 1px;
+}
+
+#main  table tr th {
+	text-align: center;
+	background: #eee;
+}
+
+#main .btn-box {
+	width: 30%;
+	margin: 0 auto;
+}
+
+#main .btn-box p {
+	text-align: center;
+}
+
+/*リンク（全般）設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+a {
+	color: #333;
+	transition: 0.5s;
+}
+
+a:hover {
+	color: #b6aa77;
+	text-decoration: none;
+}
+/*mainコンテンツ
+---------------------------------------------------------------------------*/
+#main h2 {
+	clear: both;
+	font-size: 18px;
+	letter-spacing: 0.1em;
+	margin-bottom: 20px;
+	padding: 10px;
+	background: #555;
+	color: #fff;
+	font-weight: 600;
+}
+
+/*h3タグの設定*/
+#main h3 {
+	clear: both;
+	margin: 20px 0 10px;
+	padding: 5px 0;
+	color: #000;
+	border-bottom: 1px solid #ccc;
+}
+
+#main h3:before {
+	background: #c53d43;
+	content: '';
+	display: inline-block;
+	height: 25px;
+	margin-right: 3px;
+	vertical-align: -5px;
+	width: 7px;
+}
+
+#main h4 {
+	font-size: 16px;
+}
+
+/*subのboxへの追加設定*/
+#sub .box {
+	padding: 0 10px 5px 10px;
+}
+
+/*subコンテンツ
+---------------------------------------------------------------------------*/
+#sub {
+	float: left;
+	/*右に回り込み*/
+	width: 24%;
+	/*幅*/
+}
+
+/*追加*/
+.accshow p {
+	text-align: left;
+	padding: 5px;
+}
+
+.accbox {
+	/* margin: 2em 0; */
+	padding: 0;
+	/* max-width: 400px; */
+	/*最大幅*/
+}
+
+/*ラベル*/
+.accbox label {
+	display: block;
+	margin: 1.5px 0;
+	padding: 11px 12px;
+	color: #fff;
+	font-weight: bold;
+	background: #555;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+/*ラベルホバー時*/
+.accbox label:hover {
+	background: #ddd;
+}
+
+/*チェックは隠す*/
+.accbox input {
+	display: none;
+}
+
+/*中身を非表示にしておく*/
+.accbox .accshow {
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.cssacc:checked+.accshow {
+	height: auto;
+	padding: 5px;
+	background: #eaeaea;
+	opacity: 1;
+}
+
+/*１カラム時*/
+body.c1 #sub {
+	display: none;
+}
+
+/*subコンテンツ内のh2タグ設定*/
+#sub h2 {
+	margin-bottom: 0;
+	box-shadow: none;
+	font-size: 16px;
+	/*文字サイズ*/
+	text-align: center;
+	/*内容をセンタリング*/
+	padding: 5px 15px;
+	/*上下、左右へのボックス内の余白*/
+	background: #726e62;
+	/*背景色（グラデーションが使えない古いブラウザ向け）*/
+	background: linear-gradient(#726e62, #433f35);
+	/*グラデーション*/
+}
+
+/*フッター設定
+--------------------------------------------------------------------------------------------------------------------------------*/
+footer {
+	clear: both;
+	background: #000;
+	font-size: 85%;
+	padding: 30px;
+	/* bottom: 0px; */
+	/* height: 140px; */
+	bottom: 0;
+}
+
+footer .snsicon {
+	clear: both;
+	display: block;
+	width: 90px;
+	margin: 0 auto;
+}
+
+footer .snsicon li {
+	float: left;
+	width: 30px;
+}
+
+
+footer .snsicon li i {
+	color: #fff;
+	font-size: 16px;
+	padding-bottom: 10px;
+}
+
+#copyright {
+	clear: both;
+	text-align: center;
+	/* background: #333; */
+	/*背景色*/
+	color: #fff;
+}
+
+#copyright a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/*ボタン(btn)の設定。
+---------------------------------------------------------------------------*/
+input[type="submit"].btn, input[type="button"].btn {
+	width: 100%;
+	padding: 10px 10px;
+	margin-bottom: 20px;
+	border: 2px solid##583829;
+	border-radius: 2px;
+	background: linear-gradient(#ea0000, #b40000 50%, #910000 50%);
+	font-size: 16px;
+	color: #fff;
+}
+
+/*マウスオン時の設定*/
+input[type="submit"].btn:hover, input[type="button"].btn:hover {
+	border: 2px solid #c10000;
+	background: linear-gradient(#fe0000, #d50000 50%, #c10000 50%);
+	position: relative;
+	top: 1px;
+	left: 1px;
+}
+
+select {
+	padding: 5px 10px;
+	margin: 10px 0;
+}
+
+/*PAGE TOP設定
+---------------------------------------------------------------------------*/
+/* #pagetop { */
+/* 	clear: both; */
+/* } */
+
+/* #pagetop a { */
+/* 	color: #fff; */
+/* 	font-size: 20px; */
+/* 	background: #000; */
+/* 	text-decoration: none; */
+/* 	text-align: center; */
+/* 	display: block; */
+/* 	float: right; */
+/* 	width: 60px; */
+/* 	line-height: 60px; */
+/* 	border: 2px solid #fff; */
+/* 	margin-bottom: 20px; */
+/* } */
+
+
+/*loginページ*/
+#form {
+	width: 50%;
+	margin: 30px auto;
+	padding: 30px;
+	background: #efefef;
+	border-radius: 8px;
+}
+
+form p {
+	font-size: 16px;
+	font-weight: 200;
+	text-align: center;
+}
+
+.form-title {
+	text-align: center;
+}
+
+.id, .pass {
+	margin-bottom: 30px;
+}
+
+input[type="text"], input[type="password"] {
+	padding: 6px;
+	font-size: 14px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background-color: white;
+	margin-right: 20px;
+}
+#form input[type="text"], #form input[type="password"] {
+	margin-right: 0;
+	width:50%;
+}
+
+
+#form .submit .btn {
+	text-align: center;
+	width: 30%;
+}
+/*画面幅750px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:750px) {
+	#sub {
+		float: none;
+		width: 100%;
+	}
+	#form {
+		width: 97%;
+		padding: 10px 5px;
+	}
+
+	#main table {
+		width: 100%;
+	}
+	#main .btn-box {
+		width: 100%;
+		margin: 0 auto;
+	}
+}

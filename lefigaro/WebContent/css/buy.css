@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/*buyPay
+--------------------------------------------------------------------------*/
+#main .buyinfo p {
+	text-align: left;
+}
+
+#main .buyinfo span {
+	color: #FF0000;
+}
+#main .buyinfo img {
+	width:80%;
+	height:auto;
+}
+
+/*buyConfirm
+--------------------------------------------------------------------------*/
+#main .buyconfirm .cartinfo table {
+	margin: 50px 0;
+}
+
+#main .cartinfo table, th, td {
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+	line-height: 1.5;
+	right: 0px;
+}
+
+#main .cartinfo table img {
+	width: 80px;
+	height: auto;
+}
+
+#main .cartinfo table .product-name {
+	width: 40%;
+}
+
+#main .cartinfo table th {
+	width: 10%;
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	border: 1px solid #ccc;
+	background: #efefef;
+}
+
+#main .cartinfo table td {
+	padding: 10px;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid #ccc;
+}
+
+#main .priceinfo table {
+	width: 30%;
+	margin-top: 40px;
+}
+
+/*画面幅750px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:750px) {
+	#main .buyinfo {
+	width:100%;
+
+	}
+
+	#main .priceinfo table {
+		width: 100%;
+		margin-left: none;
+	}
+}

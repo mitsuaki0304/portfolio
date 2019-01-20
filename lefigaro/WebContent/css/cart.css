@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/*mainコンテンツ
+---------------------------------------------------------------------------*/
+#main .cartinfo {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#main .cartinfo table {
+	width: 100%;
+}
+
+#main table img {
+	width: 100px;
+	height: auto;
+}
+
+#main table.cartinfo .product-name {
+	width: 40%;
+}
+
+#main table.cartinfo th {
+	/*     width: 10%; */
+	/*     padding: 10px; */
+	/*     font-weight: bold; */
+	/*     vertical-align: top; */
+	border: 1px solid #ccc;
+	background: #efefef;
+}
+
+#main .sum {
+	width: 30%;
+	margin-left: auto;
+}
+
+/*画面幅750px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:750px) {
+	#main .cartinfo {
+		width: 100%;
+	}
+	#main table th {
+		width: 40%;
+	}
+	#main table th:nth-child(3), td:nth-child(3) {
+		display: none;
+	}
+	#main table th:nth-child(5), td:nth-child(5) {
+		display: none;
+	}
+}
+
+@media screen and (max-width:350px) {
+	/*全体の設定
+---------------------------------------------------------------------------*/
+	#main table th:nth-child(5), td:nth-child(5) {
+		display: none;
+	}
+	#main .sum {
+		width: 50%;
+		margin-left: auto;
+	}
+}

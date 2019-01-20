@@ -1,0 +1,320 @@
+@charset "utf-8";
+
+/*全端末（PC・タブレット・スマホ）共通設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+/*
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    background: #fff;
+    -webkit-text-size-adjust: none;
+}
+/*
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+figure,
+form {
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ol {
+    padding-left: 10px;
+   padding-bottom: 15px;
+}
+/*
+img {
+    border: none;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 100%;
+    border-spacing: 0;
+}
+
+iframe {
+    width: 100%;
+}
+
+
+
+/*mainコンテンツ
+---------------------------------------------------------------------------*/
+#main {
+	float: left;
+	width: 72%;
+}
+
+/*productDeteial*/
+
+#main .detail img {
+	width: 40%;
+	height: auto;
+	float: left;
+	border: 1px solid #efefef;
+}
+
+#main .detail h4 {
+	font-size: 30px;
+}
+
+
+#main .content {
+	width: 55%;
+	float: right;
+}
+
+#main .detail .btn-box {
+	width: 70%;
+}
+
+#main .review-box {
+	border: 1px solid #ddd;
+	padding: 15px;
+	margin-bottom: 20px;
+}
+
+#main .review-box hr {
+	text-align: center;
+}
+
+#main .productinfo table {
+	width: 100%;
+}
+
+
+#main .productinfo th {
+	background: #efefef;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	width: 40%;
+}
+
+#main .productinfo td {
+	padding: 10px;
+	border-top: 1px solid #ccc;
+}
+
+
+
+/*box
+---------------------------------------------------------------------------*/
+/*main,subのbox共通*/
+.box {
+	overflow: hidden;
+	padding: 20px;
+}
+
+/*subのboxへの追加設定*/
+#sub .box {
+	padding: 0 10px 5px 10px;
+}
+
+/*productList
+---------------------------------------------------------------------------*/
+/* #main form { */
+/* 	margin-left: 10px; */
+/* } */
+
+#main form .sort {
+	padding: 5px 0;
+}
+
+#main .list {
+	position: relative;
+	overflow: hidden;
+	width: 22%;
+	/* margin-bottom: 20px; */
+	float: left;
+	/* height: 450px; */
+	padding: 10px;
+	margin-top: 20px;
+}
+
+#main .list a {
+	text-decoration: none;
+	overflow: hidden;
+}
+
+#main .list .btn {
+	/* padding: 5px; */
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+/*ボックス内のh4タグ設定*/
+#main .box .list h4 {
+	color: #b6aa77;
+}
+
+/*ボックス内の段落(p)タグ設定*/
+#main .list p {
+	padding: 0;
+	font-size: 12px;
+	text-align: left;
+	/*文字サイズ*/
+}
+
+#main .list h4 {
+	font-weight: bold;
+	height: 50px;
+}
+
+#main .list figure img {
+	width: 100%;
+	border: 1px solid #ccc;
+}
+
+#main .star-rating {
+	position: relative;
+	width: 3em;
+	/* height: 1em; */
+	font-size: 20px;
+}
+
+#main .star-rating-front {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	color: #ffcc33;
+}
+
+#main .star-rating-back {
+	color: #ccc;
+}
+
+/*subコンテンツ
+---------------------------------------------------------------------------*/
+
+/*subコンテンツ内のh2タグ設定*/
+#sub h2 {
+	margin-bottom: 0;
+	box-shadow: none;
+	font-size: 16px;
+	text-align: center;
+	padding: 5px 15px;
+}
+
+/*画面幅750px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:750px) {
+	.inner {
+		width: auto;
+	}
+
+	/*main,subコンテンツ
+---------------------------------------------------------------------------*/
+	#main, #sub {
+		float: none;
+		width: auto;
+	}
+	#main .detail img {
+		float: none;
+		width: 100%;
+		height: auto;
+	}
+	#main .detail .content {
+		width: 100%;
+	}
+
+	/*PAGE TOP設定
+---------------------------------------------------------------------------*/
+	#pagetop {
+		margin-right: 3%;
+	}
+
+	/*画面幅650px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+	@media screen and (max-width:650px) {
+		/*商品一覧ページの各ブロック
+---------------------------------------------------------------------------*/
+		/*各ボックスの設定*/
+		#main .list {
+			width: auto;
+			float: none;
+			margin-bottom: 0;
+		}
+		#main .list {
+			height: auto;
+			border-right: none;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		}
+		#main .list .btn {
+			display: none;
+		}
+		#main .list a {
+			text-decoration: block;
+		}
+		/*ボックス内の写真設定*/
+		#main .list figure img {
+			width: 40%;
+			float: left;
+			margin-right: 3%;
+		}
+		.star-rating {
+			margin-left: 70%;
+		}
+	}
+
+	/*画面幅480px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+	@media screen and (max-width:480px) {
+		/*全体の設定
+---------------------------------------------------------------------------*/
+		body {
+			font-size: 12px;
+			/*文字サイズ*/
+			line-height: 1.5;
+			/*行間*/
+		}
+		#main .detail {
+		width:70%;
+		margin: 0 auto;
+
+		}
+		#main .detail h4 {
+			font-size: 20px;
+		}
+		#main .detail .btn-box {
+			width: 100%;
+		}
+
+	}
+}

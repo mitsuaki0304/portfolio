@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+<!-- 	シンプルテーマ -->
+	<constant name="struts.ui.theme" value="simple" />
+	<package name="com.portfolio.lefigaro.action"
+		extends="struts-default">
+
+		<!-- 共通部分 -->
+
+		<action name="HomeAction"
+			class="com.portfolio.lefigaro.action.HomeAction" method="execute">
+			<result name="success">home.jsp</result>
+		</action>
+
+		<action name="LoginAction"
+			class="com.portfolio.lefigaro.action.LoginAction" method="execute">
+			<result name="success">home.jsp</result>
+			<result name="error">login.jsp</result>
+			<result name="buy">buyDestination.jsp</result>
+			<result name="review">createReview.jsp</result>
+			<result name="reviewError">productDetail.jsp</result>
+		</action>
+
+		<action name="GoLoginAction"
+			class="com.portfolio.lefigaro.action.GoLoginAction" method="execute">
+			<result name="success">login.jsp</result>
+		</action>
+
+		<action name="LogoutAction"
+			class="com.portfolio.lefigaro.action.LogoutAction" method="execute">
+			<result name="success">home.jsp</result>
+		</action>
+
+		<action name="CreateUserAction"
+			class="com.portfolio.lefigaro.action.CreateUserAction"
+			method="execute">
+			<result name="success">createUser.jsp</result>
+		</action>
+
+		<action name="CreateUserConfirmAction"
+			class="com.portfolio.lefigaro.action.CreateUserConfirmAction"
+			method="execute">
+			<result name="success">createUserConfirm.jsp</result>
+			<result name="error">createUser.jsp</result>
+		</action>
+
+		<action name="CreateUserCompleteAction"
+			class="com.portfolio.lefigaro.action.CreateUserCompleteAction"
+			method="execute">
+			<result name="success">createUserComplete.jsp</result>
+		</action>
+
+
+		<!-- 商品表示 -->
+		<action name="ProductListAction"
+			class="com.portfolio.lefigaro.action.ProductListAction"
+			method="execute">
+			<result name="success">productList.jsp</result>
+		</action>
+
+		<action name="ProductDetailAction"
+			class="com.portfolio.lefigaro.action.ProductDetailAction"
+			method="execute">
+			<result name="success">productDetail.jsp</result>
+		</action>
+
+		<action name="OrderAction"
+			class="com.portfolio.lefigaro.action.OrderAction" method="execute">
+			<result name="success">productList.jsp</result>
+		</action>
+
+		<action name="CreateReviewAction"
+			class="com.portfolio.lefigaro.action.CreateReviewAction" method="execute">
+			<result name="success">createReview.jsp</result>
+			<result name="error">productDetail.jsp</result>
+			<result name="login">login.jsp</result>
+		</action>
+
+		<action name="CreateReviewConfirmAction"
+			class="com.portfolio.lefigaro.action.CreateReviewConfirmAction"
+			method="execute">
+			<result name="success">createReviewConfirm.jsp</result>
+		</action>
+
+		<action name="CreateReviewCompleteAction"
+			class="com.portfolio.lefigaro.action.CreateReviewCompleteAction"
+			method="execute">
+			<result name="success">createReviewComplete.jsp</result>
+		</action>
+
+		<!-- 購入 -->
+		<action name="CartAction"
+			class="com.portfolio.lefigaro.action.CartAction" method="execute">
+			<result name="success">cart.jsp</result>
+		</action>
+
+		<action name="CartInAction"
+			class="com.portfolio.lefigaro.action.CartInAction" method="execute">
+			<result name="success">cart.jsp</result>
+		</action>
+
+
+		<action name="BuyDestinationAction"
+		class="com.portfolio.lefigaro.action.BuyDestinationAction"
+		method="execute">
+		<result name="success">buyDestination.jsp</result>
+		<result name="login">login.jsp</result>
+		</action>
+
+		<action name="BuyPayAction"
+		class="com.portfolio.lefigaro.action.BuyPayAction"
+		method="execute">
+		<result name="success">buyPay.jsp</result>
+		</action>
+
+		<action name="BuyConfirmAction"
+		class="com.portfolio.lefigaro.action.BuyConfirmAction"
+		method="execute">
+		<result name="success">buyConfirm.jsp</result>
+		</action>
+
+
+		<action name="BuyCompleteAction"
+		class="com.portfolio.lefigaro.action.BuyCompleteAction"
+		method="execute">
+		<result name="success">buyComplete.jsp</result>
+		</action>
+
+		<!-- マイページ -->
+		<action name="MyPageAction"
+			class="com.portfolio.lefigaro.action.MyPageAction" method="execute">
+			<result name="success">myPage.jsp</result>
+		</action>
+
+		<action name="BuyHistoryAction"
+			class="com.portfolio.lefigaro.action.BuyHistoryAction"
+			method="execute">
+			<result name="success">buyHistory.jsp</result>
+		</action>
+
+
+		<action name="DestinationInfoAction"
+			class="com.portfolio.lefigaro.action.DestinationInfoAction"
+			method="execute">
+			<result name="success">destinationInfo.jsp</result>
+		</action>
+
+		<action name="CreateDestinationAction"
+			class="com.portfolio.lefigaro.action.CreateDestinationAction"
+			method="execute">
+			<result name="success">createDestination.jsp</result>
+		</action>
+
+		<action name="CreateDestinationConfirmAction"
+			class="com.portfolio.lefigaro.action.CreateDestinationConfirmAction"
+			method="execute">
+			<result name="success">createDestinationConfirm.jsp</result>
+			<result name="error">createDestination.jsp</result>
+		</action>
+
+		<action name="CreateDestinationCompleteAction"
+			class="com.portfolio.lefigaro.action.CreateDestinationCompleteAction"
+			method="execute">
+			<result name="success">createDestinationComplete.jsp</result>
+			<result name="buyPay">buyPay.jsp</result>
+		</action>
+
+
+		<action name="UserInfoAction"
+			class="com.portfolio.lefigaro.action.UserInfoAction" method="execute">
+			<result name="success">userInfo.jsp</result>
+		</action>
+
+
+
+
+	</package>
+</struts>
