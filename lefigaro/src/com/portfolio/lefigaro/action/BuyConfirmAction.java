@@ -41,7 +41,7 @@ public class BuyConfirmAction extends ActionSupport implements SessionAware {
 		session.put("sum", sum);
 		cartList = cartDAO.serchCartInfo(userId, tempId);
 		session.put("cartList", cartList);
-		System.out.println("FLG"+flg);
+
 		if(!(flg.isEmpty())) {
 			destinationList=destinationDAO.getNewDestinaton(userId);
 			session.put("destinationList", destinationList);

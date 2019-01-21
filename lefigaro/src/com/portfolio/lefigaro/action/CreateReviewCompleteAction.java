@@ -19,18 +19,13 @@ public class CreateReviewCompleteAction extends ActionSupport implements Session
 	private ReviewDAO reviewDAO = new ReviewDAO();
 
 	public String execute() throws SQLException {
-//		System.out.println("REVIEW"+userId);
-//		System.out.println("REVIEp"+productId);
+
 		reviewDAO.userReview(
 				userId,
 				productId,
 				title,
 				reviewStar,
 				comment
-//				Integer.parseInt(session.get("productId").toString()),
-//				session.get("title").toString(),
-//				Integer.parseInt(session.get("reviewStar").toString()),
-//				session.get("comment").toString()
 				);
 
 		String result = SUCCESS;

@@ -13,7 +13,7 @@ public class CreateDestinationAction extends ActionSupport implements SessionAwa
 	public String execute() {
 		session.put("userId", userId);
 		session.put("tempId", tempId);
-		System.out.println("tempId"+tempId);
+
 		return SUCCESS;
 	}
 

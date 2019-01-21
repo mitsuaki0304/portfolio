@@ -52,9 +52,9 @@
 								src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>'
 								width="120px" height="120px" /></td>
 							<td><s:property value="productName" /></td>
-							<td><s:property value="addressNum" />
-							<s:property value="region" />
-							<s:property value="city" />
+							<td><s:property value="addressNum" /><br>
+							<s:property value="region" /><br>
+							<s:property value="city" /><br>
 							<s:property value="other" /></td>
 							<td><s:property value="productCount" /></td>
 							<td><s:property value="totalPrice" /><span>円</span></td>

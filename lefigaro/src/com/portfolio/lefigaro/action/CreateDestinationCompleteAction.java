@@ -29,7 +29,7 @@ public class CreateDestinationCompleteAction  extends ActionSupport implements S
 	private ArrayList<DestinationInfoDTO> destinationList = new ArrayList<DestinationInfoDTO>();
 	public String execute() throws SQLException {
 		String result = SUCCESS;
-		System.out.println("userId"+userId);
+
 		destinationDAO.createDestination(
 				session.get("userId").toString(),
 				session.get("familyName").toString(),
@@ -46,8 +46,7 @@ public class CreateDestinationCompleteAction  extends ActionSupport implements S
 
 		if(!(tempId.isEmpty()))
 		{
-			System.out.println("userddddddddddddId"+userId);
-			System.out.println("tempddddddddddddId"+tempId);
+
 			destinationList=destinationDAO.getUserDestinaton(userId);
 			session.put("destinationList", destinationList);
 			session.put("tempId", tempId);

@@ -26,7 +26,7 @@ public class CartAction  extends ActionSupport implements SessionAware{
 
 
 	public String execute() throws SQLException{
-		System.out.println("flg"+deleteFlg);
+
 		if (deleteFlg == null) {
 			cartList = cartDAO.getCartInfo(tempId);
 			session.put("cartList", cartList);
@@ -41,7 +41,7 @@ public class CartAction  extends ActionSupport implements SessionAware{
 			return result;
 		}
 	public void delete() throws SQLException {
-		System.out.println("temoId"+tempId);
+
 		cartDAO.deleteCart(tempId);
 		cartList = cartDAO.getCartInfo(tempId);
 		session.put("cartList", cartList);

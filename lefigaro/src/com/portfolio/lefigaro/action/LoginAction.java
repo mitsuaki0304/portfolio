@@ -44,21 +44,11 @@ public class LoginAction extends ActionSupport implements SessionAware {
 
 			session.put("userId", loginInfoDTO.getUserId());
 			session.put("userPass", loginInfoDTO.getUserPass());
-			System.out.println("fgl"+loginInfoDTO.getLoginFlg());
-//			if (loginDTO.getAdminFlg()) {
-//				result = "admin";
-//				return result;
-//			}
-//			String userId=loginInfoDTO.getUserId();
 
-//			String userName = loginInfoDTO.getUserName();
-
-			System.out.println("loginUserId"+userId);
-			System.out.println("loginUserPass"+userPass);
 			if("buy".equals(type)) {
 				result="buy";
 				CartDAO cartDAO = new CartDAO();
-//				String tempId = session.get("tempId").toString();
+
 				cartDAO.insertUserId(userId, tempId);
 				destinationList=destinationDAO.getUserDestinaton(userId);
 				session.put("destinationList", destinationList);

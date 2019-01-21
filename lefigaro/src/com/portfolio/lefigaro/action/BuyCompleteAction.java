@@ -32,10 +32,6 @@ public class BuyCompleteAction extends ActionSupport implements SessionAware {
 
 		cartList = cartDAO.serchCartInfo(userId, tempId);
 		for (int i = 0; i < cartList.size(); ++i) {
-			System.out.println("userId"+cartList.get(i).getUserId());
-			System.out.println("TotalPrice"+cartList.get(i).getTotalPrice());
-			System.out.println("idsssssssssss"+id);
-			System.out.println("userIddadadadaddddddddddddddddddddddd");
 			buyHistoryDAO.buyProductInfo(
 					cartList.get(i).getUserId(),
 					cartList.get(i).getProductId(),

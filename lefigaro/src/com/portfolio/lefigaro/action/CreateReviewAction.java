@@ -24,9 +24,9 @@ public class CreateReviewAction extends ActionSupport implements SessionAware {
 
 		if(session.containsKey("userId")){
 			System.out.println("review-user"+userId);
-//			int productId=Integer.parseInt(session.get("productId").toString());
+
 			loginInfoDTO=reviewDAO.doublecheck(productId, userId);
-//			System.out.print("Flg"+loginInfoDTO.getReviewFlg());
+
 			if (loginInfoDTO.getReviewFlg()) { //trueで書き込みありのデータ確認 二重書き込み禁止へ
 				String result = ERROR;
 				setMessage("すでにレビュー投稿されています。");

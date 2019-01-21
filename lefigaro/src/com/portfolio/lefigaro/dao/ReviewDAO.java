@@ -18,7 +18,7 @@ public class ReviewDAO implements SessionAware {
 	private DBConnector dbConnector = new DBConnector();
 	private Connection connection = dbConnector.getConnection();
 	private LoginInfoDTO loginInfoDTO = new LoginInfoDTO();
-//	private  ProductInfoDTO productInfoDTO = new ProductInfoDTO();
+
 
 	public void userReview(String userId, int productId, String title, int reviewStar, String comment) throws SQLException {
 		String sql = "INSERT INTO user_review(user_id, product_id, title, review_star, comment) VALUES(?,?,?,?,?)";
@@ -56,7 +56,7 @@ public class ReviewDAO implements SessionAware {
 				dto.setReviewStar(resultSet.getInt("review_star"));
 				dto.setComment(resultSet.getString("comment"));
 				reviewInfoDTO.add(dto);
-//				System.out.println("reviewtest"+dto.getFamilyName());
+
 			}
 
 		} catch (Exception e) {
@@ -85,7 +85,7 @@ public class ReviewDAO implements SessionAware {
 			if (!(resultSet.getString("user_id").equals(null))) {
 				System.out.println("IF通過テスト");
 				loginInfoDTO.setReviewFlg(true);
-				System.out.print(loginInfoDTO.getReviewFlg());
+
 			}
 
 		} catch (Exception e) {

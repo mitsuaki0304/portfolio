@@ -18,7 +18,7 @@ public class CreateReviewConfirmAction  extends ActionSupport implements Session
 
 	public String execute(){
 		String result = SUCCESS;
-		System.out.println("confirm"+userId);
+
 		if(!(title.equals(""))
 			&&!(reviewStar==0)
 			&&!(comment.equals(""))){

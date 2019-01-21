@@ -17,16 +17,12 @@ public class BuyDestinationAction  extends ActionSupport implements SessionAware
 	private String userId;
 	private CartDAO cartDAO = new CartDAO();
 	private DestinationDAO destinationDAO  = new DestinationDAO();
-//	private LoginInfoDTO loginInfoDTO = new LoginInfoDTO();
+
 	private ArrayList<DestinationInfoDTO> destinationList = new ArrayList<DestinationInfoDTO>();
 	private String tempId;
 	public String execute() throws SQLException{
-		System.out.println("buyuserId"+userId);
 
 		if(session.containsKey("userId")){
-
-			System.out.println("成功");
-//			String userId = session.get("userId").toString();
 
 			cartDAO.insertUserId(userId, tempId);
 
@@ -36,7 +32,7 @@ public class BuyDestinationAction  extends ActionSupport implements SessionAware
 			String result = SUCCESS;
 			return result;
 		}
-		System.out.println("失敗");
+
 		String result = "login";
 
 		type="buy";
@@ -44,26 +40,6 @@ public class BuyDestinationAction  extends ActionSupport implements SessionAware
 		session.put("type", type);
 		return result;
 	}
-
-//		CartDAO cartDAO = new CartDAO();
-//		CartInfoDTO cartInfoDTO = cartDAO.getCartItemInfo();
-//		session.put("itemId", cartInfoDTO.getItemId());
-//		session.put("itemCount", cartInfoDTO.getItemCount());
-//		session.put("totalPrice", cartInfoDTO.getTotalPrice());
-//		session.put("regist_date", cartInfoDTO.getRegist_date());
-
-//		String result = "login";
-//		if(session.containsKey("id")){
-//			CartDAO cartDAO = new CartDAO();
-//			CartInfoDTO cartInfoDTO = cartDAO.getCartItemInfo();
-//			session.put("id",cartInfoDTO.getId());
-//			session.put("buyItem_name",cartInfoDTO.getItemName());
-//			session.put("buyItem_price",cartInfoDTO.getItemPrice());
-//			return SUCCESS;
-//		}
-//		String cart;
-//		session.put("type", cart);
-//		return result;
 
 
 	@Override

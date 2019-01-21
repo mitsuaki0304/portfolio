@@ -12,8 +12,7 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 	private String userPass;
 	private String tempId;
 	public String execute() {
-		System.out.println("mypageId" + userId);
-		System.out.println("mypagePass" + userPass);
+
 		session.put("userId", userId);
 		session.put("userPass", userPass);
 		System.out.println("tempId"+tempId);

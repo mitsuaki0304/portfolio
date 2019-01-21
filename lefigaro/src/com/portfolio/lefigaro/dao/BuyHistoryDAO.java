@@ -62,7 +62,7 @@ public class BuyHistoryDAO {
 
 	public void buyProductInfo(String userId, int productId ,int productCount ,int totalPrice, int id)throws SQLException {
 		 String sql="INSERT INTO user_buy_history(user_id, product_id, product_count, total_price, destination_id, regist_date) VALUES(?, ?, ?, ?, ?, ?)";
-		 System.out.println("DAO通過テスト"+userId);
+
 			try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1,userId);

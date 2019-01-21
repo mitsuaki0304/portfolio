@@ -59,7 +59,6 @@ public class CartDAO {
 				dto.setRegistDate(resultSet.getString("regist_date"));
 				dto.setImageFilePath(resultSet.getString("image_file_path"));
 				dto.setImageFileName(resultSet.getString("image_file_name"));
-				System.out.println("DAOimage"+dto.getImageFileName());
 				cartInfoDTO.add(dto);
 			}
 
@@ -68,32 +67,6 @@ public class CartDAO {
 		}
 		return cartInfoDTO;
 	}
-
-//	public ArrayList<CartInfoDTO> createCartInfo(String userId) throws SQLException {
-//		ArrayList<CartInfoDTO> cartInfoDTO = new ArrayList<CartInfoDTO>();
-//		String sql = "SELECT*FROM cart_info where user_id=?";
-//
-//		try {
-//			PreparedStatement preparedStatement = connection.prepareStatement(sql);
-//			preparedStatement.setString(1, userId);
-//			ResultSet resultSet = preparedStatement.executeQuery();
-//			while (resultSet.next()) {
-//				CartInfoDTO dto = new CartInfoDTO();
-////				dto.setUserId(resultSet.getString("user_id"));
-//				dto.setProductId(resultSet.getInt("product_id"));
-////				dto.setProductName(resultSet.getString("product_name"));
-////				dto.setPrice(resultSet.getInt("price"));
-//				dto.setProductCount(resultSet.getInt("product_count"));
-//				dto.setTotalPrice(resultSet.getInt("total_price"));
-//				dto.setRegistDate(resultSet.getString("regist_date"));
-//				cartInfoDTO.add(dto);
-//			}
-//
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		return cartInfoDTO;
-//	}
 
 	//#Cartから#BuyDestinationへログインしたとき,UserIdを挿入する。
 	public void insertUserId(String userId,String tempId) throws SQLException {
@@ -165,8 +138,7 @@ public class CartDAO {
 	public ArrayList<CartInfoDTO> serchCartInfo(String userId, String tempId) throws SQLException {
 		ArrayList<CartInfoDTO> cartInfoDTO = new ArrayList<CartInfoDTO>();
 		String sql = "SELECT ci.*, pi.product_name, pi.image_file_path, pi.image_file_name FROM cart_info as ci left JOIN product_info as pi on ci.product_id = pi.product_id where user_id=? AND temp_user_id=?";
-System.out.println("DAOSss"+tempId);
-System.out.println("DAOSdddddddddddddddss"+userId);
+
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, userId);

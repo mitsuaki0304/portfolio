@@ -17,27 +17,15 @@ public class BuyPayAction extends ActionSupport implements SessionAware{
 	private String flg;
 
 	private String tempId;
-//	private String pay;
+
 	private ArrayList<CartInfoDTO> cartList = new ArrayList<CartInfoDTO>();
-//	private ArrayList<DestinationInfoDTO> destinationList = new ArrayList<UserDestinationInfoDTO>();
-//	private CartDAO cartDAO = new CartDAO();
-//	private UserDestinationDAO userDestinationDAO = new UserDestinationDAO();
-//	public UserDestinationDTO dto = new UserDestinationDTO();
+
 	public String execute()throws SQLException{
 
-		System.out.println("tempId"+tempId);
 		session.put("id", id);
 		session.put("userId", userId);
 		session.put("tempId", tempId);
 		session.put("flg", flg);
-//		if(pay.equals("1")){
-//		payment = "現金払い";
-//		session.put("pay",payment);
-//	}else{
-//		payment = "クレジットカード";
-//		session.put("pay",payment);
-//	}
-
 		return SUCCESS;
 	}
 

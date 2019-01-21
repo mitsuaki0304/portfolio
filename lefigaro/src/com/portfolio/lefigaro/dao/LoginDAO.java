@@ -26,16 +26,13 @@ public class LoginDAO {
 		if (resultSet.next()) {
 			loginInfoDTO.setUserId(resultSet.getString("user_id"));
 			loginInfoDTO.setUserPass(resultSet.getString("user_pass"));
-//			loginInfoDTO.setAdminFlg(resultSet.getBoolean("admin_flg"));
+
 
 			if (!(resultSet.getString("user_id").equals(null))) {
 				loginInfoDTO.setLoginFlg(true);
 				System.out.println("fgl"+loginInfoDTO.getLoginFlg());
 			}
-//			if (!(resultSet.getString("admin_flg").equals(null))) {
-//				loginDTO.setAdminFlg(true);
-//
-//			}
+
 
 		}
 	}catch(Exception e){

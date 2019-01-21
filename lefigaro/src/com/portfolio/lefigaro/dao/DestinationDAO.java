@@ -43,7 +43,7 @@ public class DestinationDAO {
 
 		ArrayList<DestinationInfoDTO> DestinationInfoDTO = new ArrayList<DestinationInfoDTO>();
 		String sql = "SELECT*FROM user_destination where user_id=?";
-		System.out.println("DAOdest"+userId);
+
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, userId);
@@ -63,7 +63,7 @@ public class DestinationDAO {
 				dto.setCity(resultSet.getString("city"));
 				dto.setOther(resultSet.getString("other"));
 				DestinationInfoDTO.add(dto);
-				System.out.println("DAO"+dto.getCity());
+
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -95,7 +95,7 @@ public class DestinationDAO {
 				dto.setCity(resultSet.getString("city"));
 				dto.setOther(resultSet.getString("other"));
 				DestinationInfoDTO.add(dto);
-				System.out.println("DAO"+dto.getCity());
+
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
